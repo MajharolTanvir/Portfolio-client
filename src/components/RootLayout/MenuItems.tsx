@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { Menu } from "antd";
 import Link from "next/link";
 
@@ -11,11 +11,17 @@ const pages = [
   { label: "Contact", link: "/contact" },
 ];
 
-const MenuItems = () => {
+type ComponentProps = {
+  navMode: "horizontal" | "vertical";
+  menuTheme: "dark" | "light";
+}
+
+const MenuItems = ({ navMode, menuTheme }: ComponentProps) => {
   return (
     <Menu
-      theme="dark"
-      mode="horizontal"
+      className="text-black md:text-white"
+      theme={menuTheme}
+      mode={navMode}
       items={pages.map((page) => {
         return {
           key: page.label,
@@ -24,6 +30,6 @@ const MenuItems = () => {
       })}
     />
   );
-}
+};
 
-export default MenuItems
+export default MenuItems;

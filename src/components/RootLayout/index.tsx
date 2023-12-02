@@ -2,13 +2,15 @@
 import { Layout, theme } from "antd";
 import HeaderSection from "./Header";
 import FooterSection from "./Footer";
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 const { Content } = Layout;
 
 const Navbar = ({ children }: { children: ReactNode }) => {
   const {
     token: { colorBgContainer },
   } = theme.useToken();
+
+
   return (
     <Layout className="layout">
       <HeaderSection />
@@ -17,7 +19,7 @@ const Navbar = ({ children }: { children: ReactNode }) => {
           className="site-layout-content"
           style={{ background: colorBgContainer, minHeight: "100vh" }}
         >
-          Children
+          {children}
         </div>
       </Content>
       <FooterSection />
