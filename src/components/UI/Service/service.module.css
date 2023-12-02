@@ -1,0 +1,13 @@
+
+
+.header_title h1 {
+  color: transparent;
+  -webkit-text-stroke: 2px #5799FC;
+  text-stroke: 2px #5799FC;
+  text-align: center;
+}
+
+
+.service_Section{
+  box-shadow: 0 0 10px #5799FC;
+}
