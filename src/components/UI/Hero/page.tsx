@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./hero.module.css";
 import { useEffect, useState } from "react";
 import personalImage from '@/utilities/Tanvir_immage_PNG_2.png'
-import SocialLink from '../SocialLink/SocialLink';
+import SocialLink from '../SocialLink/page';
 
 const HeroSection = () => {
 const titles = [
