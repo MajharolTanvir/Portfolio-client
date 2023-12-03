@@ -1,39 +1,38 @@
-'use client'
-import React from 'react'
+"use client";
 import Image from "next/image";
 import styles from "./hero.module.css";
 import { useEffect, useState } from "react";
+import SocialLink from "../SocialLink/page";
 import personalImage from '@/utilities/Tanvir_immage_PNG_2.png'
-import SocialLink from '../SocialLink/page';
 
 const HeroSection = () => {
-const titles = [
-  "Frontend Developer",
-  "Backend Developer",
-  "Full-stack Developer",
-  "Wordpress Developer",
-  "Wix Developer",
-  "Squarespace Developer",
-];
+  const titles = [
+    "Frontend Developer",
+    "Backend Developer",
+    "Full-stack Developer",
+    "Wordpress Developer",
+    "Wix Developer",
+    "Squarespace Developer",
+  ];
 
-const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-useEffect(() => {
-  const interval = setInterval(() => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % titles.length);
-  }, 3000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % titles.length);
+    }, 3000);
 
-  return () => clearInterval(interval);
-}, [titles.length]);
+    return () => clearInterval(interval);
+  }, [titles.length]);
 
   return (
     <div className={styles.hero_header}>
       <div className={styles.hero_back_title}>
         <h1 className="">Majharul Tanvir</h1>
       </div>
-      <div className="w-[90%] mx-auto flex flex-col justify-center items-center z-10">
+      <div className="flex flex-col justify-center items-center z-10">
         <Image
-          className="h-full"
+          className="h-full bg-transparent"
           src={personalImage}
           alt=""
           height={600}
@@ -55,6 +54,6 @@ useEffect(() => {
       </div>
     </div>
   );
-}
+};
 
-export default HeroSection
+export default HeroSection;
