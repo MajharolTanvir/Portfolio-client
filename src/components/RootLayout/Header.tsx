@@ -4,10 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 const { Header } = Layout;
 import logo from "@/utilities/logo.png";
-import { CgProfile } from "react-icons/cg";
 import MenuItems from "./MenuItems";
 import { FiMenu } from "react-icons/fi";
 import DrawerSection from "./Drawer";
+import { UserOutlined } from "@ant-design/icons";
 
 const text = <span>Title</span>;
 
@@ -30,11 +30,8 @@ const HeaderSection = () => {
 
   return (
     <Header
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-      }}
+      style={{ background: "#0c0724" }}
+      className="grid grid-cols-2 md:grid-cols-3 justify-between items-center bg-secondaryColor"
     >
       <FiMenu className="md:hidden text-3xl text-white" onClick={showDrawer} />
       <Link href="/">
@@ -46,17 +43,19 @@ const HeaderSection = () => {
           height={200}
         />
       </Link>
-      <div className="hidden md:block">
-        <MenuItems navMode="horizontal" menuTheme="dark" />
+      <div className="hidden md:block w-full">
+        <MenuItems />
       </div>
-      <Popover
-        className="hidden md:block"
-        placement="bottomRight"
-        title={text}
-        content={content}
-      >
-        <CgProfile className="text-3xl text-white" />
-      </Popover>
+      <div className="flex justify-end">
+        <Popover
+          className="hidden md:block"
+          placement="bottomRight"
+          title={text}
+          content={content}
+        >
+          <UserOutlined className="text-2xl text-white" />
+        </Popover>
+      </div>
       <DrawerSection onClose={onClose} open={open} />
     </Header>
   );

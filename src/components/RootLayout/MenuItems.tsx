@@ -1,6 +1,7 @@
 import React from "react";
 import { Menu } from "antd";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const pages = [
   { label: "Home", link: "/" },
@@ -11,24 +12,23 @@ const pages = [
   { label: "Contact", link: "/contact" },
 ];
 
-type ComponentProps = {
-  navMode: "horizontal" | "vertical";
-  menuTheme: "dark" | "light";
-}
+const MenuItems = () => {
+  const activePath = usePathname();
 
-const MenuItems = ({ navMode, menuTheme }: ComponentProps) => {
   return (
-    <Menu
-      className="text-black md:text-white"
-      theme={menuTheme}
-      mode={navMode}
-      items={pages.map((page) => {
-        return {
-          key: page.label,
-          label: <Link href={page.link}>{page.label}</Link>,
-        };
-      })}
-    />
+    <div className="flex justify-center items-center w-full gap-5">
+      {pages.map((page) => (
+        <Link
+          key={page.link}
+          href={page.link}
+          className={`px-2 pb-4 ${
+            activePath === page.link ? "font-bold" : "text-white"
+          }`}
+        >
+          {page.label}
+        </Link>
+      ))}
+    </div>
   );
 };
 

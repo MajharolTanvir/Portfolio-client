@@ -4,8 +4,8 @@ import HeroSection from "@/components/UI/Hero/page";
 import NewsLetterSection from "@/components/UI/NewsLetter/newsLetter";
 import Projects from "@/components/UI/Projects/page";
 import Service from "@/components/UI/Service/page";
+import SkillsSection from "@/components/UI/Skills/skills";
 import { Metadata } from "next";
-
 
 export const metadata: Metadata = {
   title: "Portfolio | Home",
@@ -16,6 +16,7 @@ export default function Home() {
   return (
     <div>
       <HeroSection />
+      <SkillsSection />
       <Projects />
       <Service />
       <CertificatesSection />

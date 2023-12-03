@@ -1,0 +1,71 @@
+
+
+.header_title h1 {
+  color: transparent;
+  -webkit-text-stroke: 2px #5799fc;
+  text-stroke: 2px #5799fc;
+  text-align: center;
+}
+
+.Icon_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0px 7px #5799fc;
+  border: 1px solid #5799fc;
+  width: 180px;
+  height: 130px;
+  padding: 30px 40px;
+  border-radius: 15px;
+}
+
+.flipCard {
+  width: 180px;
+  height: 130px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flipCardInner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.flipCard:hover .flipCardInner {
+  transform: rotateY(180deg);
+}
+
+.flipped .flipCardInner {
+  transform: rotateY(180deg);
+}
+
+.flipCardFront,
+.flipCardBack {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flipCardFront {
+  background-color: transparent;
+  color: #5799fc;
+}
+
+.flipCardBack {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  font-weight: medium;
+  color: #5799fc;
+  transform: rotateY(180deg);
+  box-shadow: 0 0px 10px #5799fc;
+  border-radius: 15px;
+  text-align: center;
+}
