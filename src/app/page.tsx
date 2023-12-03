@@ -1,6 +1,7 @@
 import BlogSection from "@/components/UI/Blog/page";
 import CertificatesSection from "@/components/UI/Certificates/page";
 import HeroSection from "@/components/UI/Hero/page";
+import NewsLetterSection from "@/components/UI/NewsLetter/newsLetter";
 import Projects from "@/components/UI/Projects/page";
 import Service from "@/components/UI/Service/page";
 import { Metadata } from "next";
@@ -19,6 +20,7 @@ export default function Home() {
       <Service />
       <CertificatesSection />
       <BlogSection />
+      <NewsLetterSection />
     </div>
   );
 }
