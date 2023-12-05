@@ -17,8 +17,8 @@
 
 .hero_back_title h1 {
   color: transparent;
-  text-stroke: 2px #d6e7eb;
-  -webkit-text-stroke: 2px #d6e7eb;
+  text-stroke: 2px #e8f7fb;
+  -webkit-text-stroke: 2px #e8f7fb;
   animation: slide-left 10s linear infinite;
   line-height: 100%;
   text-align: center;
@@ -37,7 +37,7 @@
   font-size: 50px;
   font-weight: 700;
   text-align: center;
-  color: #d6e7eb;
+  color: #e8f7fb;
 }
 
 .active {

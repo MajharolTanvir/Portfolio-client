@@ -2,8 +2,8 @@
 
 .header_title h1 {
   color: transparent;
-  -webkit-text-stroke: 2px #5799fc;
-  text-stroke: 2px #5799fc;
+  -webkit-text-stroke: 2px #114b68;
+  text-stroke: 2px #114b68;
   text-align: center;
 }
 
@@ -12,17 +12,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0px 7px #5799fc;
-  border: 1px solid #5799fc;
+  box-shadow: 0 0px 7px #114b68;
+  border: 1px solid #114b68;
   width: 180px;
   height: 130px;
-  padding: 30px 40px;
+  padding: 25px 30px;
   border-radius: 15px;
 }
 
 .flipCard {
-  width: 180px;
-  height: 130px;
+  width: 160px;
+  height: 120px;
   perspective: 1000px;
   cursor: pointer;
 }
@@ -55,7 +55,7 @@
 
 .flipCardFront {
   background-color: transparent;
-  color: #5799fc;
+  color: #114b68;
 }
 
 .flipCardBack {
@@ -63,9 +63,18 @@
   flex-direction: column;
   font-size: 15px;
   font-weight: medium;
-  color: #5799fc;
+  color: #e8f7fb;
+  background: #114b68;
   transform: rotateY(180deg);
-  box-shadow: 0 0px 10px #5799fc;
+  box-shadow: 0 0px 10px #114b68;
   border-radius: 15px;
   text-align: center;
+}
+
+
+@media only screen and (max-width: 425px) {
+.flipCard {
+  width: 140px;
+  height: 120px;
+}
 }
