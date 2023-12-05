@@ -35,15 +35,15 @@ const CertificatesSection = () => {
   ];
 
   return (
-    <div className="mt-20 text-secondaryColor">
-      <div className="lg:grid grid-cols-12 items-center justify-items-center">
+    <div className="mt-20 bg-[#114b68] pb-20">
+      <div className="w-[90%] mx-auto">
         <div
-          className={`lg:-rotate-90 col-span-2 text-[50px] lg:text-[100px] xl:text-[130px] md:text-[80px] font-bold ${styles.header_title}`}
+          className={`col-span-2 text-[50px] lg:text-[100px] xl:text-[130px] md:text-[80px] font-bold ${styles.header_title}`}
         >
-          <h1>Success</h1>
+          <h1>Certificates</h1>
         </div>
-        <div className="col-span-10 w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <div className="w-full text-[#e8f7fb]">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-10">
             {certificates.map((certificate) => (
               <div
                 key={certificate.title}
@@ -53,17 +53,19 @@ const CertificatesSection = () => {
                   <Image
                     src={certificate.thumbnail}
                     alt=""
-                    className="w-full h-80 object-cover object-top hover:object-bottom duration-[6000ms] ease-linear"
+                    className="w-full h-[250px] md:h-[300px] lg:h-[450px] object-cover object-top hover:object-bottom duration-[6000ms] ease-linear"
                     height={300}
                     width={350}
                   />
                 </div>
-                <div className="card-body">
-                  <h2 className="card-title">{certificate.title}</h2>
-                  <p>{certificate.duration}</p>
-                  <span className="text-lg font-medium">
+                <div className="p-5">
+                  <h2 className="font-bold text-lg md:text-xl lg:text-2xl">
+                    {certificate.title}
+                  </h2>
+                  <span className="text-lg font-semibold">
                     {certificate.courseProvider}
                   </span>
+                  <p>{certificate.duration}</p>
                 </div>
               </div>
             ))}

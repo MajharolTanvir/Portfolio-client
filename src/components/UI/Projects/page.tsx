@@ -47,7 +47,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="mt-20 pb-10 bg-[#114b68]">
+    <div className="mt-20 pb-20 bg-[#114b68]">
       <div className="w-[90%] mx-auto">
         <div
           className={`text-[50px] lg:text-[100px] xl:text-[130px] md:text-[80px] font-bold ${styles.header_title}`}
@@ -55,11 +55,11 @@ const Projects = () => {
           <h1>Projects</h1>
         </div>
         <div className="mt-10 w-full">
-          <div className="hidden md:block">
+          <div className="">
             {blogs.map((blog) => (
               <div
                 key={blog.title}
-                className="md:flex justify-center items-center my-5 md:my-10"
+                className="md:flex justify-center items-center md:my-10"
               >
                 <div className="mx-4 md:w-[400px] lg:w-[800px] xl:w-[1000px]">
                   <Image
@@ -67,44 +67,44 @@ const Projects = () => {
                     alt="Shoes"
                     width={500}
                     height={500}
-                    className="w-full h-[600px] object-cover object-top hover:object-bottom duration-[6000ms] ease-linear rounded-md"
+                    className="w-full h-[250px] md:h-[600px] object-cover object-top hover:object-bottom rounded-md"
                   />
                 </div>
-                <div className="flex flex-col gap-5 md:-ml-16 m-5 md:m-0 md:w-[400px] lg:w-[700px] xl:w-[900px] bg-[#114b68]/90 p-10 text-justify text-[#e8f7fb] rounded-md">
-                  <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+                <div className="flex flex-col gap-5 md:-ml-16 m-5 md:m-0 md:w-[400px] lg:w-[700px] xl:w-[900px] bg-[#e8f7fb] md:bg-[#114b68]/90 p-5 md:p-10 text-justify text-[#114b68] md:text-[#e8f7fb] rounded-md">
+                  <h2 className="text-xl lg:text-2xl xl:text-4xl">
                     {blog.title}
                   </h2>
-                  <div className="w-full h-[1px] bg-[#e8f7fb]/60 my-2"></div>
-                  <p className="text-md md:text-lg lg:text-2xl">
+                  <div className="w-full h-[1px] bg-[#114b68] md:bg-[#e8f7fb]/60 my-[1px]"></div>
+                  <p className="text-sm md:text-md lg:text-xl">
                     {blog.description.slice(0, 400)}
                   </p>
-                  <div className="w-full h-[1px] bg-[#e8f7fb]/60 my-2"></div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center items-center gap-3">
+                  <div className="w-full h-[1px] bg-[#114b68] md:bg-[#e8f7fb]/60 my-[1px]"></div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-start md:justify-items-center items-center gap-3">
                     <Link
                       href=""
-                      className="flex gap-2 items-center font-medium text-md md:text-lg lg:text-2xl text-[#e8f7fb]"
+                      className="flex gap-2 items-center font-medium text-sm lg:text-md xl:text-xl text-[#114b68] md:text-[#e8f7fb]"
                     >
                       <FaExternalLinkAlt />
                       <h6>Live link</h6>
                     </Link>
                     <Link
                       href=""
-                      className="flex gap-2 items-center font-medium text-md md:text-lg lg:text-2xl text-[#e8f7fb]"
+                      className="flex gap-2 items-center font-medium text-sm lg:text-md xl:text-xl text-[#114b68] md:text-[#e8f7fb]"
                     >
                       <FaGithub />
                       <h6>Client side</h6>
                     </Link>
                     <Link
                       href=""
-                      className="flex gap-2 items-center font-medium text-md md:text-lg lg:text-2xl text-[#e8f7fb]"
+                      className="flex gap-2 items-center font-medium text-sm lg:text-md xl:text-xl text-[#114b68] md:text-[#e8f7fb]"
                     >
                       <FaGithub />
                       <h6>Server side</h6>
                     </Link>
                   </div>
-                  <div className="w-full h-[1px] bg-[#e8f7fb]/60 my-2"></div>
+                  <div className="w-full h-[1px] bg-[#114b68] md:bg-[#e8f7fb]/60  my-[1px]"></div>
                   <div className="">
-                    <button className="bg-[#e8f7fb] w-full py-1.5 lg:py-2 rounded-md text-[#114b68] font-medium hover:bg-[#e8f7fb]/60 text-md md:text-lg lg:text-xl">
+                    <button className="bg-[#114b68] md:bg-[#e8f7fb] w-full py-1.5 lg:py-2 rounded-md text-[#e8f7fb] md:text-[#114b68] font-medium hover:bg-[#114b68]/60 md:hover:bg-[#e8f7fb]/60 text-md md:text-lg lg:text-xl">
                       Show details
                     </button>
                   </div>
@@ -112,64 +112,8 @@ const Projects = () => {
               </div>
             ))}
           </div>
-          {/* <div className="md:hidden">
-            {blogs.slice(0, 3).map((blog, index) => (
-              <div
-                key={blog.title}
-                className="w-full mb-5 shadow-xl grid md:grid-cols-2 p-5"
-              >
-                <div className="w-full">
-                  <Image
-                    src={blog.image}
-                    alt="Shoes"
-                    width={500}
-                    height={500}
-                    className="w-full h-60 sm:h-80 object-cover object-top hover:object-bottom duration-[6000ms] ease-linear"
-                  />
-                </div>
-                <div className="text-justify">
-                  <h2 className="my-2 font-bold text-xl">{blog.title}</h2>
-                  <div className="w-full h-[1px] bg-accentColor/60 my-2"></div>
-                  <p>{blog.description.slice(0, 400)}</p>
-                  <div className="w-full h-[1px] bg-accentColor/60 my-2"></div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between items-center gap-3">
-                    <Link
-                      href=""
-                      className="flex gap-2 items-center font-medium"
-                      target="_blank"
-                    >
-                      <FaExternalLinkAlt />
-                      <h6>Live link</h6>
-                    </Link>
-                    <Link
-                      href=""
-                      className="flex gap-2 items-center font-medium"
-                      target="_blank"
-                    >
-                      <FaGithub />
-                      <h6>Client side</h6>
-                    </Link>
-                    <Link
-                      href=""
-                      className="flex gap-2 items-center font-medium"
-                      target="_blank"
-                    >
-                      <FaGithub />
-                      <h6>Server side</h6>
-                    </Link>
-                  </div>
-                  <div className="w-full h-[1px] bg-accentColor/60 my-2"></div>
-                  <div className="card-actions">
-                    <button className="bg-secondaryColor w-full py-1.5 rounded-md text-mainColor font-medium hover:bg-mainColor hover:border-secondaryColor hover:border-2 hover:text-accentColor">
-                      Show details
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div> */}
         </div>
-        <div className="flex justify-end items-center mt-16">
+        <div className="flex justify-center md:justify-end items-center mt-16">
           <button className="bg-[#e8f7fb] px-5 py-1.5 lg:py-2 rounded-md text-[#114b68] font-medium hover:bg-[#e8f7fb]/60 text-md md:text-lg lg:text-xl">
             Show more Projects
           </button>
