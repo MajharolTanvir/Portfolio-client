@@ -44,18 +44,18 @@ const BlogSection = () => {
   ];
 
   return (
-    <div className="mt-20 text-secondaryColor">
-      <div className="lg:grid grid-cols-12 items-center justify-items-center">
+    <div className="mt-20">
+      <div className="w-[90%] mx-auto">
         <div
-          className={`lg:-rotate-90 col-span-2 text-[50px] lg:text-[100px] xl:text-[130px] md:text-[80px] font-bold ${styles.header_title}`}
+          className={`text-[50px] lg:text-[100px] xl:text-[130px] md:text-[80px] font-bold ${styles.header_title}`}
         >
           <h1>Blogs</h1>
         </div>
-        <div className="col-span-10 mt-10 md:mt-0 w-full">
+        <div className="mt-10 w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
           {blogs.map((blog) => (
             <div
               key={blog.title}
-              className="card w-full bg-secondaryColor/5 mb-5 shadow-xl grid md:grid-cols-2 p-5"
+              className="w-full mb-5 shadow-xl p-5 rounded-md"
             >
               <div className="w-full">
                 <Image
@@ -63,14 +63,20 @@ const BlogSection = () => {
                   alt="Shoes"
                   width={500}
                   height={500}
-                  className="w-full h-80 object-cover object-top hover:object-bottom duration-[6000ms] ease-linear"
+                  className="w-full h-80 object-cover object-top hover:object-bottom duration-[6000ms] ease-linear rounded-md"
                 />
               </div>
-              <div className="card-body">
-                <h2 className="card-title">{blog.title}</h2>
-                <p>{blog.description.slice(0, 500)}</p>
-                <div className="card-actions">
-                  <button className="bg-mainColor w-full py-1.5 rounded-md text-secondaryColor font-medium hover:bg-secondaryColor hover:text-mainColor">
+              <div className="flex flex-col gap-5 p-5 md:p-7 lg:p-10 text-justify text-[#114b68] rounded-md">
+                <h2 className="text-xl lg:text-2xl xl:text-4xl">
+                  {blog.title}
+                </h2>
+                <div className="w-full h-[1px] bg-[#114b68]/60 my-[1px]"></div>
+                <p className="text-sm md:text-md lg:text-xl">
+                  {blog.description.slice(0, 500)}
+                </p>
+                <div className="w-full h-[1px] bg-[#114b68]/60 my-[1px]"></div>
+                <div className="flex justify-center">
+                  <button className="bg-[#114b68] w-full py-1.5 lg:py-2 rounded-md text-[#e8f7fb] font-medium hover:bg-[#114b68]/60 text-md md:text-lg lg:text-xl">
                     Show details
                   </button>
                 </div>
@@ -78,11 +84,11 @@ const BlogSection = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div className="flex justify-center items-center mt-10">
-        <button className="bg-secondaryColor/80 hover:bg-transparent hover:shadow-sm hover:shadow-secondaryColor text-mainColor hover:border rounded-md hover:border-secondaryColor/80 hover:text-secondaryColor px-5 py-1 text-white font-medium">
+      <div className="flex justify-center md:justify-end items-center mt-10">
+        <button className="bg-[#114b68] px-5 py-1.5 lg:py-2 rounded-md text-[#e8f7fb] font-medium hover:bg-[#114b68]/60 text-md md:text-lg lg:text-xl">
           Show more blogs
         </button>
+      </div>
       </div>
     </div>
   );

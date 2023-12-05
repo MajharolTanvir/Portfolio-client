@@ -47,7 +47,7 @@ const CertificatesSection = () => {
             {certificates.map((certificate) => (
               <div
                 key={certificate.title}
-                className="card w-full bg-secondaryColor/5 drop-shadow-md shadow-xl cursor-pointer"
+                className="card w-full shadow-xl"
               >
                 <div>
                   <Image
