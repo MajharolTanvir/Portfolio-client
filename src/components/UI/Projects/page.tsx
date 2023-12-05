@@ -47,60 +47,64 @@ const Projects = () => {
   ];
 
   return (
-    <div className="mt-20">
-      <div className="lg:grid grid-cols-12 items-center justify-items-center">
+    <div className="mt-20 pb-10 bg-[#114b68]">
+      <div className="w-[90%] mx-auto">
         <div
-          className={`lg:-rotate-90 col-span-2 text-[50px] lg:text-[100px] xl:text-[130px] md:text-[80px] font-bold ${styles.header_title}`}
+          className={`text-[50px] lg:text-[100px] xl:text-[130px] md:text-[80px] font-bold ${styles.header_title}`}
         >
           <h1>Projects</h1>
         </div>
-        <div className="col-span-10 mt-10 md:mt-0 w-full">
+        <div className="mt-10 w-full">
           <div className="hidden md:block">
             {blogs.map((blog) => (
               <div
                 key={blog.title}
-                className="md:flex justify-center items-center gap-5 my-5"
+                className="md:flex justify-center items-center my-5 md:my-10"
               >
-                <div className="mx-4 md:mx-0 md:w-[400px] lg:w-[800px]">
+                <div className="mx-4 md:w-[400px] lg:w-[800px] xl:w-[1000px]">
                   <Image
                     src={blog.image}
                     alt="Shoes"
                     width={500}
                     height={500}
-                    className="w-full h-[600px] object-cover object-top hover:object-bottom duration-[6000ms] ease-linear"
+                    className="w-full h-[600px] object-cover object-top hover:object-bottom duration-[6000ms] ease-linear rounded-md"
                   />
                 </div>
-                <div className="flex flex-col gap-5 md:-ml-16 m-5 md:m-0 md:w-[400px] lg:w-[700px] bg-mainColor/90 p-10 text-justify text-accentColor rounded-md">
-                  <h2 className="card-title">{blog.title}</h2>
-                  <div className="w-full h-[1px] bg-accentColor/60 my-2"></div>
-                  <p>{blog.description.slice(0, 400)}</p>
-                  <div className="w-full h-[1px] bg-accentColor/60 my-2"></div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between items-center gap-3">
+                <div className="flex flex-col gap-5 md:-ml-16 m-5 md:m-0 md:w-[400px] lg:w-[700px] xl:w-[900px] bg-[#114b68]/90 p-10 text-justify text-[#e8f7fb] rounded-md">
+                  <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+                    {blog.title}
+                  </h2>
+                  <div className="w-full h-[1px] bg-[#e8f7fb]/60 my-2"></div>
+                  <p className="text-md md:text-lg lg:text-2xl">
+                    {blog.description.slice(0, 400)}
+                  </p>
+                  <div className="w-full h-[1px] bg-[#e8f7fb]/60 my-2"></div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center items-center gap-3">
                     <Link
                       href=""
-                      className="flex gap-2 items-center font-medium"
+                      className="flex gap-2 items-center font-medium text-md md:text-lg lg:text-2xl text-[#e8f7fb]"
                     >
                       <FaExternalLinkAlt />
                       <h6>Live link</h6>
                     </Link>
                     <Link
                       href=""
-                      className="flex gap-2 items-center font-medium"
+                      className="flex gap-2 items-center font-medium text-md md:text-lg lg:text-2xl text-[#e8f7fb]"
                     >
                       <FaGithub />
                       <h6>Client side</h6>
                     </Link>
                     <Link
                       href=""
-                      className="flex gap-2 items-center font-medium"
+                      className="flex gap-2 items-center font-medium text-md md:text-lg lg:text-2xl text-[#e8f7fb]"
                     >
                       <FaGithub />
                       <h6>Server side</h6>
                     </Link>
                   </div>
-                  <div className="w-full h-[1px] bg-accentColor/60 my-2"></div>
-                  <div className="card-actions">
-                    <button className="bg-secondaryColor w-full py-1.5 rounded-md text-mainColor font-medium hover:bg-mainColor hover:border-secondaryColor hover:border-2 hover:text-accentColor">
+                  <div className="w-full h-[1px] bg-[#e8f7fb]/60 my-2"></div>
+                  <div className="">
+                    <button className="bg-[#e8f7fb] w-full py-1.5 lg:py-2 rounded-md text-[#114b68] font-medium hover:bg-[#e8f7fb]/60 text-md md:text-lg lg:text-xl">
                       Show details
                     </button>
                   </div>
@@ -108,7 +112,7 @@ const Projects = () => {
               </div>
             ))}
           </div>
-          <div className="md:hidden">
+          {/* <div className="md:hidden">
             {blogs.slice(0, 3).map((blog, index) => (
               <div
                 key={blog.title}
@@ -163,13 +167,13 @@ const Projects = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
-      </div>
-      <div className="flex justify-end items-center mt-16">
-        <button className="bg-secondaryColor/80 hover:bg-transparent hover:shadow-sm hover:shadow-secondaryColor text-mainColor hover:border rounded-md hover:border-secondaryColor/80 hover:text-secondaryColor px-5 py-1 text-white font-medium">
-          Show more Projects
-        </button>
+        <div className="flex justify-end items-center mt-16">
+          <button className="bg-[#e8f7fb] px-5 py-1.5 lg:py-2 rounded-md text-[#114b68] font-medium hover:bg-[#e8f7fb]/60 text-md md:text-lg lg:text-xl">
+            Show more Projects
+          </button>
+        </div>
       </div>
     </div>
   );

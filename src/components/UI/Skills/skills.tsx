@@ -27,13 +27,13 @@ const SkillsSection = () => {
   const skills = data?.skills;
 
   return (
-    <div className="mt-20 lg:grid grid-cols-12 items-center justify-items-center w-[90%] mx-auto">
+    <div className="mt-20 w-[90%] mx-auto">
       <div
-        className={`lg:-rotate-90 col-span-1 text-[50px] lg:text-[100px] xl:text-[130px] md:text-[80px] font-bold ${styles.header_title}`}
+        className={`text-[50px] lg:text-[100px] xl:text-[130px] md:text-[80px] font-bold ${styles.header_title}`}
       >
         <h1>Skills</h1>
       </div>
-      <div className="mt-10 md:mt-0 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-7 gap-5 md:gap-10 justify-items-center items-center col-span-11 w-full">
+      <div className="mt-10 md:mt-0 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-7 gap-5 md:gap-10 justify-items-center items-center w-full">
         {skills?.map((skill: any) => (
           <div
             key={skill?.id}
