@@ -19,15 +19,15 @@
 
 .icon {
   margin: 1px;
-  color: #5799FC;
+  color: #d6e7eb;
   padding: 8px;
   border-radius: 50%;
-  box-shadow: 0px 1px 4px #5799FC;
+  box-shadow: 0px 1px 4px #d6e7eb;
   transition: box-shadow 0.3s ease-in-out;
 }
 
 .title {
-  color: #5799FC;
+  color: #d6e7eb;
   visibility: hidden;
   padding: 1px 10px;
   white-space: nowrap;
@@ -38,5 +38,19 @@
 
 .slideCard:hover .title {
   visibility: visible;
-  box-shadow: 0px 1px 4px #5799FC;
+  box-shadow: 2px 3px 4px #d6e7eb;
+}
+
+@media only screen and (max-width: 425px) {
+  .icon {
+    padding: 4px;
+    border-radius: 50%;
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  .icon {
+    padding: 5px;
+    border-radius: 50%;
+  }
 }

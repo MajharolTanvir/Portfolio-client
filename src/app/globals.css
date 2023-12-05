@@ -13,11 +13,11 @@
 
 /* Customize the scrollbar thumb (the draggable part) */
 ::-webkit-scrollbar-thumb {
-  background: #d6e7eb;
+  background: #e8f7fb;
 }
 
 /* 
-* accent = #d6e7eb
 * main = #114b68
-* #e8f7fb
+* second = #e8f7fb
+* accent = #d6e7eb
  */

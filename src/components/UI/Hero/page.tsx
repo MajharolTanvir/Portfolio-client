@@ -32,7 +32,7 @@ const HeroSection = () => {
       </div>
       <div className="flex flex-col justify-center items-center z-10">
         <Image
-          className="h-full bg-transparent"
+          className={`h-full bg-transparent ${styles.hero_image}`}
           src={personalImage}
           alt=""
           height={600}
