@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import { Layout, Popover } from "antd";
+import { Popover } from "antd";
 import Link from "next/link";
 import Image from "next/image";
-const { Header } = Layout;
 import logo from "@/utilities/logo.png";
 import MenuItems from "./MenuItems";
 import { FiMenu } from "react-icons/fi";
 import DrawerSection from "./Drawer";
-import { UserOutlined } from "@ant-design/icons";
+import { FaUser } from "react-icons/fa";
 
 const text = <span>Title</span>;
 
@@ -29,35 +28,37 @@ const HeaderSection = () => {
   };
 
   return (
-    <Header
-      style={{ background: "#0c0724" }}
-      className="grid grid-cols-2 md:grid-cols-3 justify-between items-center bg-secondaryColor"
-    >
-      <FiMenu className="md:hidden text-3xl text-white" onClick={showDrawer} />
-      <Link href="/">
-        <Image
-          src={logo}
-          className="h-10 w-10"
-          alt="Logo"
-          width={200}
-          height={200}
+    <header className="flex justify-evenly items-center w-[90%] mx-auto">
+      <div className="flex justify-start gap-5 w-full md:w-10 items-center">
+        <FiMenu
+          className="md:hidden text-3xl text-white"
+          onClick={showDrawer}
         />
-      </Link>
+        <Link href="/">
+          <Image
+            src={logo}
+            style={{ height: "40px", width: "40px" }}
+            alt="Logo"
+            width={200}
+            height={200}
+          />
+        </Link>
+      </div>
       <div className="hidden md:block w-full">
         <MenuItems />
       </div>
-      <div className="flex justify-end">
+      <div>
         <Popover
-          className="hidden md:block"
+          className="hidden md:flex justify-end w-full"
           placement="bottomRight"
           title={text}
           content={content}
         >
-          <UserOutlined className="text-2xl text-white" />
+          <FaUser className="text-4xl text-[#d6e7eb] border p-2 rounded-full" />
         </Popover>
       </div>
       <DrawerSection onClose={onClose} open={open} />
-    </Header>
+    </header>
   );
 };
 
