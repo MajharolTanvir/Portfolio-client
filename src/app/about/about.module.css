@@ -2,11 +2,11 @@
 
 .header_title h1 {
   color: transparent;
-  -webkit-text-stroke: 2px #5799FC;
-  text-stroke: 2px #5799FC;
+  -webkit-text-stroke: 2px #114b68;
+  text-stroke: 2px #114b68;
   text-align: center;
 }
 
 .card_style {
-  box-shadow: 0 0 10px #5799FC;
+  box-shadow: 0 0 10px #114b68;
 }

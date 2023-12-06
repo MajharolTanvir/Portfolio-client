@@ -1,25 +1,32 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./about.module.css";
+import personalImage from '@/utilities/Tanvir_immage_PNG_1.png'
+import Experiences from "@/components/UI/Experience/page";
 import { HiOfficeBuilding } from "react-icons/hi";
 import { RiUserLocationFill } from "react-icons/ri";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaBriefcase } from "react-icons/fa";
-import personalImage from '@/utilities/Tanvir_immage_PNG_1.png'
 
 const About = () => {
   return (
-    <div className="mt-20">
+    <div className="mt-20 w-[90%] mx-auto">
       <div
         className={`text-[50px] lg:text-[130px] xl:text-[150px] md:text-[80px] font-bold ${styles.header_title}`}
       >
         <h1>About</h1>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center gap-10">
-        <div className="border-b border-secondaryColor rounded-[100px] md:w-[600px] lg:w-[450px] xl:w-[600px] md:rounded-[150px] shadow-md shadow-secondaryColor">
-          <Image src={personalImage} className="rounded-full" alt="" height={550} width={550} />
+        <div className="border-b border-[#114b68] rounded-[100px] md:w-[600px] lg:w-[450px] xl:w-[600px] md:rounded-[150px] shadow-md shadow-[#114b68] bg-[#114b68]">
+          <Image
+            src={personalImage}
+            className="rounded-full"
+            alt=""
+            height={550}
+            width={550}
+          />
         </div>
-        <div className="md:w-[600px] lg:w-[450px] xl:w-[600px] text-justify text-lg text-[#F4F7F9] mt-10 lg:mt-0">
+        <div className="md:w-[600px] lg:w-[450px] xl:w-[600px] text-justify text-lg text-[#114b68] mt-10 lg:mt-0 text-sm text-md xl:text-2xl">
           <p className="mb-10">
             I&apos;m
             <span className="font-bold text-2xl"> Majharul Tanvir</span> from
@@ -52,29 +59,32 @@ const About = () => {
           >
             <h1>Experienced</h1>
           </div>
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-4 justify-items-center items-center">
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-4 justify-items-center items-center md:hidden">
             <div className={`p-5 rounded-xl mb-5 ${styles.card_style}`}>
               <div className="flex items-center gap-3 mb-3">
-                <HiOfficeBuilding className="text-2xl text-secondaryColor" />
+                <HiOfficeBuilding className="text-2xl text-[#114b68]" />
                 <h4 className="text-xl font-medium">
                   Marco international C&F LTD.
                 </h4>
               </div>
               <div className="flex items-center gap-3 mb-3">
-                <FaBriefcase className="text-2xl text-secondaryColor" />
+                <FaBriefcase className="text-2xl text-[#114b68]" />
                 <h6 className="font-medium">Jatty sarkar</h6>
               </div>
               <div className="flex items-center gap-3 mb-3">
-                <RiUserLocationFill className="text-2xl text-secondaryColor" />
+                <RiUserLocationFill className="text-2xl text-[#114b68]" />
                 <h6 className="font-medium">
                   9 November, 2020 - 28 February, 2022
                 </h6>
               </div>
               <div className="flex items-center gap-3">
-                <FaLocationDot className="text-2xl text-secondaryColor" />
+                <FaLocationDot className="text-2xl text-[#114b68]" />
                 <h6>Agrabad, Chottogram</h6>
               </div>
             </div>
+          </div>
+          <div>
+            <Experiences />
           </div>
         </div>
       </div>
