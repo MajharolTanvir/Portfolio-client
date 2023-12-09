@@ -4,6 +4,7 @@ import styles from "./skills.module.css";
 import { useState } from "react";
 import { useGetAllSkillsQuery } from "@/redux/api/skillsApi";
 import { useDebounced } from "@/redux/hook";
+import Spinner from "../spinner/page";
 
 const SkillsSection = () => {
   const query: Record<string, any> = {};
@@ -21,7 +22,7 @@ const SkillsSection = () => {
 
   const { data, isLoading } = useGetAllSkillsQuery({ ...query });
   if (isLoading) {
-    <p>Loading.....</p>;
+    return <Spinner />;
   }
 
   const skills = data?.skills;
