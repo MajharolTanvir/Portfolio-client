@@ -9,7 +9,7 @@ const Navbar = ({ children }: { children: ReactNode }) => {
 
   return (
     <main>
-      <div style={{ background: "#114b68" }} className="py-3">
+      <div className="py-3">
         <HeaderSection />
       </div>
       <Content>

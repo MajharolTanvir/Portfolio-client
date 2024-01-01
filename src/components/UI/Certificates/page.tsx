@@ -35,7 +35,7 @@ const CertificatesSection = () => {
   ];
 
   return (
-    <div className="mt-20 bg-[#114b68] pb-20">
+    <div className="mt-20 pb-20">
       <div className="w-[90%] mx-auto">
         <div
           className={`col-span-2 text-[50px] lg:text-[100px] xl:text-[130px] md:text-[80px] font-bold ${styles.header_title}`}

@@ -2,13 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  background: #20252b;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
 }
 
 /* Customize the scrollbar track color */
 ::-webkit-scrollbar-track {
-  background: #114b68; /* Change this to your preferred color */
+  background: #20252b; /* Change this to your preferred color */
 }
 
 /* Customize the scrollbar thumb (the draggable part) */
@@ -16,8 +20,19 @@
   background: #e8f7fb;
 }
 
+.buttonColor {
+  background-image: linear-gradient(to right, #17e551, #17e58d);
+  color: #18181b;
+}
+
+.buttonColor:hover {
+  background: #18181b;
+  color: #ffffff;
+}
+
+
 /* 
-* main = #114b68
+* main = #20252b
 * accent = #e8f7fb
 * accent = #d6e7eb
  */

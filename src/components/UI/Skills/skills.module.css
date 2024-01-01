@@ -2,8 +2,8 @@
 
 .header_title h1 {
   color: transparent;
-  -webkit-text-stroke: 2px #114b68;
-  text-stroke: 2px #114b68;
+  -webkit-text-stroke: 2px #ffffff;
+  text-stroke: 2px #ffffff;
   text-align: center;
 }
 
@@ -12,8 +12,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0px 7px #114b68;
-  border: 1px solid #114b68;
+  box-shadow: 0 0px 7px #ffffff;
+  border: 1px solid #ffffff;
   width: 180px;
   height: 130px;
   padding: 25px 30px;
@@ -55,7 +55,7 @@
 
 .flipCardFront {
   background-color: transparent;
-  color: #114b68;
+  color: #ffffff;
 }
 
 .flipCardBack {
@@ -63,10 +63,10 @@
   flex-direction: column;
   font-size: 15px;
   font-weight: medium;
-  color: #e8f7fb;
-  background: #114b68;
+  color: #20252b;
+  background: #ffffff;
   transform: rotateY(180deg);
-  box-shadow: 0 0px 10px #114b68;
+  box-shadow: 0 0px 10px #ffffff;
   border-radius: 15px;
   text-align: center;
 }

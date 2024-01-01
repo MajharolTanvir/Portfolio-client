@@ -2,7 +2,17 @@
 
 .header_title h1 {
   color: transparent;
-  -webkit-text-stroke: 2px #5799FC;
-  text-stroke: 2px #5799FC;
+  -webkit-text-stroke: 2px #ffffff;
+  text-stroke: 2px #ffffff;
   text-align: center;
+}
+
+.buttonColor {
+  background-image: linear-gradient(to right, #17e551, #17e58d);
+  color: #18181b;
+}
+
+.buttonColor:hover {
+  background: #18181b;
+  color: #ffffff;
 }

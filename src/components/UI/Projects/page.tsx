@@ -47,7 +47,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="mt-20 pb-20 bg-[#114b68]">
+    <div className="mt-20 pb-20">
       <div className="w-[90%] mx-auto">
         <div
           className={`text-[50px] lg:text-[100px] xl:text-[130px] md:text-[80px] font-bold ${styles.header_title}`}
@@ -70,7 +70,7 @@ const Projects = () => {
                     className="w-full h-[250px] md:h-[600px] object-cover object-top hover:object-bottom rounded-md"
                   />
                 </div>
-                <div className="flex flex-col gap-5 md:-ml-16 m-5 md:m-0 md:w-[400px] lg:w-[700px] xl:w-[900px] bg-[#e8f7fb] md:bg-[#114b68]/90 p-5 md:p-10 text-justify text-[#114b68] md:text-[#e8f7fb] rounded-md">
+                <div className="flex flex-col gap-5 md:-ml-16 m-5 md:m-0 md:w-[400px] lg:w-[700px] xl:w-[900px] bg-[#20252b] md:bg-[#20252b]/90 p-5 md:p-10 text-justify text-[#114b68] md:text-[#e8f7fb] rounded-md">
                   <h2 className="text-xl lg:text-2xl xl:text-4xl">
                     {blog.title}
                   </h2>
@@ -104,7 +104,9 @@ const Projects = () => {
                   </div>
                   <div className="w-full h-[1px] bg-[#114b68] md:bg-[#e8f7fb]/60  my-[1px]"></div>
                   <div className="">
-                    <button className="bg-[#114b68] md:bg-[#e8f7fb] w-full py-1.5 lg:py-2 rounded-md text-[#e8f7fb] md:text-[#114b68] font-medium hover:bg-[#114b68]/60 md:hover:bg-[#e8f7fb]/60 text-md md:text-lg lg:text-xl">
+                    <button
+                      className={`w-full py-1.5 lg:py-2 rounded-md text-[#e8f7fb] md:text-[#114b68] font-medium text-md md:text-lg lg:text-xl ${styles.buttonColor}`}
+                    >
                       Show details
                     </button>
                   </div>
@@ -114,7 +116,7 @@ const Projects = () => {
           </div>
         </div>
         <div className="flex justify-center md:justify-end items-center mt-16">
-          <button className="bg-[#e8f7fb] px-5 py-1.5 lg:py-2 rounded-md text-[#114b68] font-medium hover:bg-[#e8f7fb]/60 text-md md:text-lg lg:text-xl">
+          <button className={`px-5 py-1.5 lg:py-2 rounded-md text-[#114b68] font-medium text-md md:text-lg lg:text-xl ${styles.buttonColor}`}>
             Show more Projects
           </button>
         </div>

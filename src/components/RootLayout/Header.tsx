@@ -8,12 +8,14 @@ import { FiMenu } from "react-icons/fi";
 import DrawerSection from "./Drawer";
 import { FaUser } from "react-icons/fa";
 
-const text = <span>Title</span>;
-
 const content = (
-  <div>
-    <p>Content</p>
-    <p>Content</p>
+  <div className="flex flex-col justify-center items-center w-40">
+    <Link className="text-[#20252b] w-full" href="/auth/signin">
+      Sign in
+    </Link>
+    <Link className="text-[#20252b] w-full" href="/auth/signup">
+      Sign up
+    </Link>
   </div>
 );
 
@@ -51,7 +53,6 @@ const HeaderSection = () => {
         <Popover
           className="hidden md:flex justify-end w-full"
           placement="bottomRight"
-          title={text}
           content={content}
         >
           <FaUser className="text-4xl text-[#d6e7eb] border p-2 rounded-full" />

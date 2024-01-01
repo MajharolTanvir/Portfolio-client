@@ -4,7 +4,7 @@ const { Footer } = Layout;
 
 const FooterSection = () => {
   return (
-    <Footer style={{ textAlign: "center" }}>
+    <Footer style={{ textAlign: "center", background: "#20252b", color: "white" }}>
       Ant Design ©2023 Created by Ant UED
     </Footer>
   );

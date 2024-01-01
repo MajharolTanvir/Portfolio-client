@@ -11,7 +11,7 @@ const Service = () => {
           <h1>Services</h1>
         </div>
         <div className="mt-10 md:mt-0">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-10 justify-center items-center text-[#114b68]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-10 justify-center items-center text-[#ffffff]">
             <div
               className={`border border-secondaryColor p-5 md:py-10 flex flex-col justify-center items-center rounded-lg ${styles.service_Section}`}
             >
@@ -63,11 +63,13 @@ const Service = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="flex justify-end items-center mt-16">
-        <button className="bg-secondaryColor/80 hover:bg-transparent hover:shadow-sm hover:shadow-secondaryColor text-mainColor hover:border rounded-md hover:border-secondaryColor/80 hover px-5 py-1 text-white font-medium">
-          Show service details
-        </button>
+        <div className="flex justify-center md:justify-end items-center mt-16">
+          <button
+            className={`px-5 py-1.5 lg:py-2 rounded-md text-[#114b68] font-medium text-md md:text-lg lg:text-xl ${styles.buttonColor}`}
+          >
+            Show service details
+          </button>
+        </div>
       </div>
     </div>
   );

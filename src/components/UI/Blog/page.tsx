@@ -55,7 +55,7 @@ const BlogSection = () => {
           {blogs.map((blog) => (
             <div
               key={blog.title}
-              className="w-full mb-5 shadow-xl p-5 rounded-md"
+              className="w-full mb-5 shadow-xl p-5 rounded-md bg-[#ffffff]"
             >
               <div className="w-full">
                 <Image
@@ -66,17 +66,19 @@ const BlogSection = () => {
                   className="w-full h-80 object-cover object-top hover:object-bottom duration-[6000ms] ease-linear rounded-md"
                 />
               </div>
-              <div className="flex flex-col gap-5 p-5 md:p-7 lg:p-10 text-justify text-[#114b68] rounded-md">
+              <div className="flex flex-col gap-5 p-5 md:p-7 lg:p-10 text-justify text-[#20252b] rounded-md">
                 <h2 className="text-xl lg:text-2xl xl:text-4xl">
                   {blog.title}
                 </h2>
-                <div className="w-full h-[1px] bg-[#114b68]/60 my-[1px]"></div>
+                <div className="w-full h-[1px] bg-[#18181b]/60 my-[1px]"></div>
                 <p className="text-sm md:text-md lg:text-xl">
                   {blog.description.slice(0, 500)}
                 </p>
-                <div className="w-full h-[1px] bg-[#114b68]/60 my-[1px]"></div>
+                <div className="w-full h-[1px] bg-[#18181b]/60 my-[1px]"></div>
                 <div className="flex justify-center">
-                  <button className="bg-[#114b68] w-full py-1.5 lg:py-2 rounded-md text-[#e8f7fb] font-medium hover:bg-[#114b68]/60 text-md md:text-lg lg:text-xl">
+                  <button
+                    className={`px-5 py-1.5 lg:py-2 rounded-md text-[#114b68] font-medium text-md md:text-lg lg:text-xl ${styles.buttonColor}`}
+                  >
                     Show details
                   </button>
                 </div>
@@ -84,11 +86,13 @@ const BlogSection = () => {
             </div>
           ))}
         </div>
-      <div className="flex justify-center md:justify-end items-center mt-10">
-        <button className="bg-[#114b68] px-5 py-1.5 lg:py-2 rounded-md text-[#e8f7fb] font-medium hover:bg-[#114b68]/60 text-md md:text-lg lg:text-xl">
-          Show more blogs
-        </button>
-      </div>
+        <div className="flex justify-center md:justify-end items-center mt-16">
+          <button
+            className={`px-5 py-1.5 lg:py-2 rounded-md text-[#114b68] font-medium text-md md:text-lg lg:text-xl ${styles.buttonColor}`}
+          >
+            Show more blogs
+          </button>
+        </div>
       </div>
     </div>
   );
