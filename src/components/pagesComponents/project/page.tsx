@@ -5,12 +5,12 @@ import { Divider } from "antd";
 import Link from "next/link";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import PopoverComponent from "@/components/UI/popover/popover";
-import styles from "@/components/pagesComponents/services/service.module.css";
+import styles from "@/components/pagesComponents/project/project.module.css";
 
-const ServiceComponent = () => {
+const ProjectComponent = () => {
   return (
     <div className="w-[90%] mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-10">
         <div className="shadow-md shadow-[#18181b] transition duration-500 rounded-md my-5">
           <div>
             <Image
@@ -77,4 +77,4 @@ const ServiceComponent = () => {
   );
 };
 
-export default ServiceComponent;
+export default ProjectComponent;
