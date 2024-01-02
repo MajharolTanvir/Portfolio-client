@@ -13,7 +13,7 @@ const Service = () => {
         <div className="mt-10 md:mt-0">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-10 justify-center items-center text-[#ffffff]">
             <div
-              className={`border border-secondaryColor p-5 md:py-10 flex flex-col justify-center items-center rounded-lg ${styles.service_Section}`}
+              className={`p-5 md:py-10 flex flex-col justify-center items-center rounded-lg ${styles.service_Section}`}
             >
               <FaCode className="text-5xl" />
               <h3 className="text-lg md:text-xl lg:text-2xl font-medium">
@@ -21,7 +21,7 @@ const Service = () => {
               </h3>
             </div>
             <div
-              className={`border border-secondaryColor p-5 md:py-10 flex flex-col justify-center items-center rounded-lg ${styles.service_Section}`}
+              className={`p-5 md:py-10 flex flex-col justify-center items-center rounded-lg ${styles.service_Section}`}
             >
               <FaCode className="text-5xl" />
               <h3 className="text-lg md:text-xl lg:text-2xl font-medium">
@@ -29,7 +29,7 @@ const Service = () => {
               </h3>
             </div>
             <div
-              className={`border border-secondaryColor p-5 md:py-10 flex flex-col justify-center items-center rounded-lg ${styles.service_Section}`}
+              className={`p-5 md:py-10 flex flex-col justify-center items-center rounded-lg ${styles.service_Section}`}
             >
               <FaCode className="text-5xl" />
               <h3 className="text-lg md:text-xl lg:text-2xl font-medium">
@@ -38,7 +38,7 @@ const Service = () => {
             </div>
 
             <div
-              className={`border border-secondaryColor p-5 md:py-10 flex flex-col justify-center items-center rounded-lg ${styles.service_Section}`}
+              className={`p-5 md:py-10 flex flex-col justify-center items-center rounded-lg ${styles.service_Section}`}
             >
               <FaWordpress className="text-5xl" />
               <h3 className="text-lg md:text-xl lg:text-2xl font-medium">
@@ -46,7 +46,7 @@ const Service = () => {
               </h3>
             </div>
             <div
-              className={`border border-secondaryColor p-5 md:py-10 flex flex-col justify-center items-center rounded-lg ${styles.service_Section}`}
+              className={`p-5 md:py-10 flex flex-col justify-center items-center rounded-lg ${styles.service_Section}`}
             >
               <FaWix className="text-5xl" />
               <h3 className="text-lg md:text-xl lg:text-2xl font-medium">
@@ -54,7 +54,7 @@ const Service = () => {
               </h3>
             </div>
             <div
-              className={`border border-secondaryColor p-5 md:py-10 flex flex-col justify-center items-center rounded-lg ${styles.service_Section}`}
+              className={`p-5 md:py-10 flex flex-col justify-center items-center rounded-lg ${styles.service_Section}`}
             >
               <FaSquarespace className="text-5xl" />
               <h3 className="text-lg md:text-xl lg:text-2xl font-medium">

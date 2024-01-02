@@ -9,7 +9,8 @@
 
 
 .service_Section{
-  box-shadow: 0 0 10px #ffffff;
+    box-shadow: 0 0px 7px #17e551;
+  border: 1px solid #17e58d;
 }
 
 .buttonColor {

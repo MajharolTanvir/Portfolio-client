@@ -9,8 +9,13 @@ type ComponentProps = {
 
 const DrawerSection = ({ open, onClose }: ComponentProps) => {
   return (
-    <Drawer title="Menus" placement="left" onClose={onClose} open={open}>
-      <MenuItems navMode="vertical" menuTheme="light" />
+    <Drawer
+      style={{ background: "#20252b", }}
+      placement="left"
+      onClose={onClose}
+      open={open}
+    >
+      <MenuItems />
     </Drawer>
   );
 };

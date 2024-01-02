@@ -12,8 +12,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0px 7px #ffffff;
-  border: 1px solid #ffffff;
+  box-shadow: 0 0px 7px #17e551;
+  border: 1px solid #17e58d;
   width: 180px;
   height: 130px;
   padding: 25px 30px;
@@ -64,9 +64,8 @@
   font-size: 15px;
   font-weight: medium;
   color: #20252b;
-  background: #ffffff;
+  background-image: linear-gradient(to right, #17e551, #17e58d);
   transform: rotateY(180deg);
-  box-shadow: 0 0px 10px #ffffff;
   border-radius: 15px;
   text-align: center;
 }

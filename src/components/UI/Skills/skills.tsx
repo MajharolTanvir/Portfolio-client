@@ -34,7 +34,7 @@ const SkillsSection = () => {
       >
         <h1>Skills</h1>
       </div>
-      <div className="mt-10 md:mt-0 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-7 gap-5 md:gap-10 justify-items-center items-center w-full">
+      <div className="mt-10 md:mt-0 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-7 gap-10 justify-items-center items-center w-full">
         {skills?.map((skill: any) => (
           <div
             key={skill?.id}
@@ -43,7 +43,13 @@ const SkillsSection = () => {
             <div className={styles.flipCardInner}>
               <div className={styles.flipCardFront}>
                 <div className={styles.Icon_box}>
-                  <Image src={skill.imageUrl} alt="" height={500} width={500} />
+                  <Image
+                    // className="w-[400px] h-[400px] md:w-[500px] md:h-[500px]"
+                    src={skill.imageUrl}
+                    alt=""
+                    height={500}
+                    width={500}
+                  />
                 </div>
               </div>
               <div className={styles.flipCardBack}>

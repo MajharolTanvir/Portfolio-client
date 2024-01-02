@@ -21,8 +21,8 @@ const MenuItems = () => {
         <Link
           key={page.link}
           href={page.link}
-          className={`px-2 text-[#114b68] md:text-white ${
-            activePath === page.link ? "font-semibold md:text-[#d6e7eb] " : ""
+          className={`px-2 text-white ${
+            activePath === page.link ? "font-semibold text-[#17e551] " : ""
           }`}
         >
           {page.label}
