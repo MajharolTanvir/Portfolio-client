@@ -4,6 +4,7 @@ import Image from "next/image";
 import reactHook from "@/utilities/React-custom-hooks-scaled.jpg";
 import JsClass from "@/utilities/javascript_classes_take_some_understanding.webp";
 import JsClosure from "@/utilities/jsClosure-598x398.webp";
+import { Divider } from "antd";
 
 const BlogSection = () => {
   const blogs = [
@@ -51,47 +52,75 @@ const BlogSection = () => {
         >
           <h1>Blogs</h1>
         </div>
-        <div className="mt-10 w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-          {blogs.map((blog) => (
-            <div
-              key={blog.title}
-              className="w-full mb-5 shadow-xl p-5 rounded-md bg-[#ffffff]"
-            >
-              <div className="w-full">
-                <Image
-                  src={blog.image}
-                  alt="Shoes"
-                  width={500}
-                  height={500}
-                  className="w-full h-80 object-cover object-top hover:object-bottom duration-[6000ms] ease-linear rounded-md"
-                />
-              </div>
-              <div className="flex flex-col gap-5 p-5 md:p-7 lg:p-10 text-justify text-[#20252b] rounded-md">
-                <h2 className="text-xl lg:text-2xl xl:text-4xl">
-                  {blog.title}
-                </h2>
-                <div className="w-full h-[1px] bg-[#18181b]/60 my-[1px]"></div>
-                <p className="text-sm md:text-md lg:text-xl">
-                  {blog.description.slice(0, 500)}
-                </p>
-                <div className="w-full h-[1px] bg-[#18181b]/60 my-[1px]"></div>
-                <div className="flex justify-center">
-                  <button
-                    className={`px-5 py-1.5 lg:py-2 rounded-md text-[#114b68] font-medium text-md md:text-lg lg:text-xl ${styles.buttonColor}`}
-                  >
-                    Show details
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="flex justify-center md:justify-end items-center mt-16">
-          <button
-            className={`px-5 py-1.5 lg:py-2 rounded-md text-[#114b68] font-medium text-md md:text-lg lg:text-xl ${styles.buttonColor}`}
-          >
-            Show more blogs
-          </button>
+        <div className={`${styles.blogCarousel}`}>
+          <div className={`${styles.blogSlide}`}>
+            <h4 className="text-lg md:text-xl lg:text-2xl xl:text-3xl pb-2">
+              Blog Post 1
+            </h4>
+            <Image
+              className="w-full h-40 md:h-60 lg:h-80"
+              src={JsClass}
+              alt="Blog Post 1"
+            />
+            <Divider className="bg-[#17e551]" />
+            <p className="text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              dolorem et officia asperiores repellat facilis aliquam. Impedit
+              sit fugit nesciunt adipisci quidem culpa, est autem et modi
+              obcaecati sapiente repellendus.
+            </p>
+          </div>
+          <div className={`${styles.blogSlide}`}>
+            <h4 className="text-lg md:text-xl lg:text-2xl xl:text-3xl pb-2">
+              Blog Post 1
+            </h4>
+            <Image
+              className="w-full h-40 md:h-60 lg:h-80"
+              src={reactHook}
+              alt="Blog Post 1"
+            />
+            <Divider className="bg-[#17e551]" />
+            <p className="text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              dolorem et officia asperiores repellat facilis aliquam. Impedit
+              sit fugit nesciunt adipisci quidem culpa, est autem et modi
+              obcaecati sapiente repellendus.
+            </p>
+          </div>
+          <div className={`${styles.blogSlide}`}>
+            <h4 className="text-lg md:text-xl lg:text-2xl xl:text-3xl pb-2">
+              Blog Post 1
+            </h4>
+            <Image
+              className="w-full h-40 md:h-60 lg:h-80"
+              src={JsClosure}
+              alt="Blog Post 1"
+            />
+            <Divider className="bg-[#17e551]" />
+            <p className="text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              dolorem et officia asperiores repellat facilis aliquam. Impedit
+              sit fugit nesciunt adipisci quidem culpa, est autem et modi
+              obcaecati sapiente repellendus.
+            </p>
+          </div>
+          <div className={`${styles.blogSlide}`}>
+            <h4 className="text-lg md:text-xl lg:text-2xl xl:text-3xl pb-2">
+              Blog Post 1
+            </h4>
+            <Image
+              className="w-full h-40 md:h-60 lg:h-80"
+              src={reactHook}
+              alt="Blog Post 1"
+            />
+            <Divider className="bg-[#17e551]" />
+            <p className="text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+              dolorem et officia asperiores repellat facilis aliquam. Impedit
+              sit fugit nesciunt adipisci quidem culpa, est autem et modi
+              obcaecati sapiente repellendus.
+            </p>
+          </div>
         </div>
       </div>
     </div>
