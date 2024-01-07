@@ -1,7 +1,6 @@
 "use client";
 import { useForm, SubmitHandler } from "react-hook-form";
 import styles from "./signup.module.css";
-import { FaFacebook, FaGoogle, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 import axios from "axios";
 import { Divider } from "antd";

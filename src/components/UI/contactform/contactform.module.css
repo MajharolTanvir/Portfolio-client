@@ -1,0 +1,13 @@
+.contact_form{
+    box-shadow: 0 0 5px #18181b;
+}
+
+.buttonColor {
+  background-image: linear-gradient(to right, #17e551, #17e58d);
+  color: #18181b;
+}
+
+.buttonColor:hover {
+  background: #18181b;
+  color: #ffffff;
+}
