@@ -1,31 +1,18 @@
 import React from "react";
-import {
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-} from "@ant-design/icons";
+import { FaBookOpen } from "react-icons/fa";
+import { GoProject } from "react-icons/go";
 import Link from "next/link";
 
 const items = [
   {
-    key: "home",
-    icon: <UploadOutlined />,
-    label: <Link href="/home">Home</Link>,
+    key: "blog",
+    icon: <FaBookOpen />,
+    label: <Link href="/dashboard/blog">Blogs</Link>,
   },
   {
-    key: "",
-    icon: <UserOutlined />,
-    label: "About",
-  },
-  {
-    key: "",
-    icon: <VideoCameraOutlined />,
-    label: "Service",
-  },
-  {
-    key: "",
-    icon: <UploadOutlined />,
-    label: "Contact",
+    key: "projects",
+    icon: <GoProject />,
+    label: <Link href="/dashboard/projects">Projects</Link>,
   },
 ];
 

@@ -6,7 +6,7 @@ const { Content } = Layout;
 
 const ContentStyle = ({ children }: { children: React.ReactNode }) => {
   return (
-    <Content style={{ margin: "24px 16px 0" }}>
+    <Content>
       <div
         style={{
           padding: 24,
