@@ -15,8 +15,7 @@ const SidebarItems = () => {
         theme="light"
         mode="inline"
         items={MenuItems()}
-        style={{ background: "#18181b", color: "#ffffff" }}
-        className="hover:text-[#17e551]"
+        style={{ background: "#18181b", color: "white"}}
       />
     </Sider>
   );
