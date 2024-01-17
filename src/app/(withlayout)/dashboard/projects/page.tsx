@@ -10,7 +10,7 @@ const BlogPage = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
         <div className="shadow-xl p-4 rounded-xl h-full flex justify-center items-center">
           <Link
-            href=""
+            href="/dashboard/projects/add-project"
             className="flex flex-col h-full w-full justify-center items-center gap-2"
           >
             <FaPlus className="text-2xl" />
